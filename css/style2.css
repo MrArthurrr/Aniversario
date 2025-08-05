@@ -15,7 +15,7 @@
 
 body {
   background-image: url("img/SabrinaKiss.gif");
-  background-color: #eccbb9;
+  background-color: #ffffff;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -83,6 +83,19 @@ body {
   justify-content: center;
   padding: 40px 10px;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eccbb9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6d0101;
+    border-radius: 10px;
 }
 
 @media (max-width: 700px) {
