@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <div class="gif"></div>
+    <section class="seção">
+        <img src="css/img/Logo AH.png" alt="Logo AH" class="topo-imagem">
+        <p class="titulo">Starring...</p>
+    </section>
+      <section class="seção2">
+  </section>
+  <script>
+window.addEventListener('scroll', function() {
+  const titulo = document.querySelector('.titulo');
+  const secao = document.querySelector('.seção');
+  const secaoTop = secao.offsetTop;
+  const scrollY = window.scrollY;
+
+  const minSize = 2;
+  const maxSize = 10;
+  
+  const scrollMax = secao.offsetHeight;
+
+  const triggerPoint = secaoTop - window.innerHeight / 2;
+
+  let newSize = minSize;
+  if (scrollY >= triggerPoint) {
+    let progress = Math.min(scrollY - triggerPoint, scrollMax) / scrollMax;
+    newSize = minSize + (maxSize - minSize) * progress;
+  }
+  titulo.style.fontSize = newSize + 'vw';
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abra o envelope</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="css/img/sabrinacarpenterlabio.png">
+  <script>
+    let titulo = "Abra o envelope ";
+    let i = 0;
+    function moverTitulo() {
+      document.title = titulo.substring(i) + titulo.substring(0, i);
+      i = (i + 1) % titulo.length;
+      setTimeout(moverTitulo, 300);
+    }
+    window.onload = moverTitulo;
+  </script>
+</head>
+<body>
+  <div class="envelope" onclick="abrirCarta()">
+    <div class="tampa"></div>
+    <div class="corpo"></div>
+    <div class="papel">
+      <a href="siteprincipal.html">Clique aqui para abrir</a>
+    </div>
+  </div>
+  <script>
+    function abrirCarta() {
+      document.querySelector('.envelope').classList.add('aberto');
+    }
+  </script>
+</body>
+</html>

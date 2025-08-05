@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Apple Garamond';
+    src: url(font/AppleGaramond.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'LouisaCP';
+    src: url(font/LouisaCP.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'NugiaVintage';
+    src: url(font/NugiaVintage.ttf) format('truetype');
+}
+
+body {
+  background-image: url("img/SabrinaKiss.gif");
+  background-color: #eccbb9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.gif {
+  height: 100vh;
+}
+
+.seção {
+  position: relative;
+  min-height: 100vh;
+  background-color: #eccbb9;
+  background-image: url(img/fundomansbestfriend.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+  box-sizing: border-box;
+}
+
+.topo-imagem {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  max-width: 600px;
+  min-width: 220px;
+  height: auto;
+  image-rendering: pixelated;
+  z-index: 2;
+}
+
+.titulo {
+  font-family: 'NugiaVintage', sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  margin-top: 220px;
+}
+
+.seção2 {
+  position: relative;
+  min-height: 100vh;
+  background-color: #eccbb9;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .topo-imagem {
+    width: 90vw;
+    min-width: 120px;
+    top: 20px;
+  }
+  .titulo {
+    font-size: 9vw;
+    margin-top: 140px;
+  }
+  .seção {
+    padding: 20px 2vw;
+  }
+}
