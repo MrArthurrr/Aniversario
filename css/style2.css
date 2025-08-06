@@ -146,8 +146,11 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: 3;
 }
 
 #presente:hover {
@@ -173,6 +176,31 @@ body {
 
 .animar-aparecer {
   animation: aparecerComEscala 0.6s ease-out forwards;
+}
+
+#bilhete-traseiro {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 60vw;
+  width: 80vw;
+  min-width: 300px;
+  height: auto;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  backface-visibility: hidden;
+  z-index: 2;
+  cursor: default;
+}
+
+#bilhete-traseiro.visivel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  z-index: 4;
 }
 
 ::-webkit-scrollbar {
