@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'Apple Garamond';
-    src: url(font/AppleGaramond.ttf) format('truetype');
+  font-family: 'Apple Garamond';
+  src: url(font/AppleGaramond.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'LouisaCP';
-    src: url(font/LouisaCP.otf) format('opentype');
+  font-family: 'LouisaCP';
+  src: url(font/LouisaCP.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'NugiaVintage';
-    src: url(font/NugiaVintage.ttf) format('truetype');
+  font-family: 'NugiaVintage';
+  src: url(font/NugiaVintage.ttf) format('truetype');
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 
 .seção {
   position: relative;
-  min-height: 100vh;
+  min-height: 105vh;
   background-color: #eccbb9;
   background-image: url(img/fundomansbestfriend.png);
   background-repeat: no-repeat;
@@ -63,11 +63,11 @@ body {
   font-family: 'NugiaVintage', sans-serif;
   color: white;
   text-align: center;
-  text-shadow: 
-    -2px -2px 0 #000,  
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
   margin-top: 220px;
 }
 
@@ -83,19 +83,109 @@ body {
   justify-content: center;
   padding: 40px 10px;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cortina-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+}
+
+.cortina {
+  flex: 1;
+  height: 100%;
+  background-color: #6d0101;
+  transition: transform 1.5s ease-in-out;
+  cursor: pointer;
+}
+
+.cortina.esquerda {
+  transform: translateX(0%);
+  background-image: url('img/cortina esquerda.jpg');
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.cortina.direita {
+  transform: translateX(0%);
+  background-image: url('img/cortina direita.png');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.cortina-container.aberto .esquerda {
+  transform: translateX(-100%);
+}
+
+.cortina-container.aberto .direita {
+  transform: translateX(100%);
+}
+
+.conteudo-revelado {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#presente {
+  max-width: 500px;
+  width: 60vw;
+  min-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#presente:hover {
+  transform: scale(1.05);
+}
+
+#presente.modo-bilhete {
+  max-width: 60vw;
+  width: 80vw;
+  min-width: 300px;
+}
+
+@keyframes aparecerComEscala {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animar-aparecer {
+  animation: aparecerComEscala 0.6s ease-out forwards;
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #eccbb9;
+  background: #eccbb9;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #6d0101;
-    border-radius: 10px;
+  background-color: #6d0101;
+  border-radius: 10px;
 }
 
 @media (max-width: 700px) {
@@ -104,11 +194,22 @@ body {
     min-width: 120px;
     top: 20px;
   }
+
   .titulo {
     font-size: 9vw;
     margin-top: 140px;
   }
+
   .seção {
     padding: 20px 2vw;
+  }
+
+  #presente {
+    width: 80vw;
+  }
+
+  #presente.modo-bilhete {
+    width: 90vw;
+    min-width: 280px;
   }
 }

@@ -1,41 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Aniversário</title>
-    <link rel="stylesheet" href="css/style2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliz Aniversário</title>
+  <link rel="stylesheet" href="css/style2.css" />
+  <link rel="icon" href="css/img/sabrinacarpenterlabio.png" />
 </head>
 <body>
-    <div class="gif"></div>
-    <section class="seção">
-        <img src="css/img/Logo AH.png" alt="Logo AH" class="topo-imagem">
-        <p class="titulo">Starring...</p>
-    </section>
-      <section class="seção2">
+  <div class="gif"></div>
+  <section class="seção">
+    <img src="css/img/Logo AH.png" alt="Logo AH" class="topo-imagem" />
+    <p class="titulo">Starring...</p>
+  </section>
+  <section class="seção2">
+    <div class="cortina-container" id="cortina">
+      <div class="cortina esquerda"></div>
+      <div class="cortina direita"></div>
+    </div>
+    <div class="conteudo-revelado">
+      <img
+        id="presente"
+        src="css/img/presente girando.gif"
+        alt="Presente"
+        style="display: none"
+      />
+    </div>
   </section>
   <script>
-window.addEventListener('scroll', function() {
-  const titulo = document.querySelector('.titulo');
-  const secao = document.querySelector('.seção');
-  const secaoTop = secao.offsetTop;
-  const scrollY = window.scrollY;
+    window.addEventListener("scroll", function () {
+      const titulo = document.querySelector(".titulo");
+      const secao = document.querySelector(".seção");
+      const secaoTop = secao.offsetTop;
+      const scrollY = window.scrollY;
 
-  const minSize = 2;
-  const maxSize = 10;
-  
-  const scrollMax = secao.offsetHeight;
+      const minSize = 2;
+      const maxSize = 10;
+      const scrollMax = secao.offsetHeight;
+      const triggerPoint = secaoTop - window.innerHeight / 2;
 
-  const triggerPoint = secaoTop - window.innerHeight / 2;
+      let newSize = minSize;
+      if (scrollY >= triggerPoint) {
+        let progress = Math.min(scrollY - triggerPoint, scrollMax) / scrollMax;
+        newSize = minSize + (maxSize - minSize) * progress;
+      }
+      titulo.style.fontSize = newSize + "vw";
+    });
 
-  let newSize = minSize;
-  if (scrollY >= triggerPoint) {
-    let progress = Math.min(scrollY - triggerPoint, scrollMax) / scrollMax;
-    newSize = minSize + (maxSize - minSize) * progress;
-  }
-  titulo.style.fontSize = newSize + 'vw';
-});
+    document.addEventListener("DOMContentLoaded", () => {
+      const cortina = document.getElementById("cortina");
+      const presente = document.getElementById("presente");
 
-</script>
+      cortina.addEventListener("click", () => {
+        cortina.classList.add("aberto");
+
+        setTimeout(() => {
+          cortina.remove();
+          presente.style.display = "block";
+          presente.classList.add("animar-aparecer");
+        }, 1500);
+      });
+
+      if (presente) {
+        presente.style.display = "none";
+
+        presente.addEventListener("click", () => {
+          if (!presente.classList.contains("modo-bilhete")) {
+            presente.src = "css/img/bilhete1.png";
+            presente.classList.add("modo-bilhete");
+            presente.classList.remove("virado");
+
+            presente.classList.remove("animar-aparecer");
+            void presente.offsetWidth;
+            presente.classList.add("animar-aparecer");
+          } else {
+            if (!presente.classList.contains("virado")) {
+              presente.classList.add("girar-direita");
+
+              setTimeout(() => {
+                presente.src = "css/img/bilhete de tras.png";
+              }, 300);
+
+              setTimeout(() => {
+                presente.classList.remove("girar-direita");
+                presente.classList.add("virado");
+              }, 600);
+            }
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
