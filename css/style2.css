@@ -83,6 +83,10 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: #eccbb9;
+  background-image: url(img/fundoshortnsweet.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
   color: #333;
   display: flex;
@@ -248,4 +252,17 @@ body {
   #presente {
     width: 80vw;
   }
+}
+
+@media (min-width: 2500px) {
+  .topo-imagem {
+    width: 90vw;
+    max-width: 1000px;
+  }
+
+  #presente {
+    width: 100vw;
+    max-width: 800px;
+  }
+  
 }
