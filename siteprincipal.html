@@ -25,11 +25,10 @@
         alt="Presente"
         style="display: none"
       />
-      <img
-        id="bilhete-traseiro"
-        src="css/img/bilhete de tras.png"
-        alt="Bilhete de Trás"
-      />
+      <div class="carta" id="carta" style="display:none;">
+        <img src="css/img/bilhete1.png" alt="Frente do Bilhete" class="face frente" />
+        <img src="css/img/bilhete de tras.png" alt="Verso do Bilhete" class="face tras" />
+      </div>
     </div>
   </section>
   <script>
@@ -55,11 +54,10 @@
     document.addEventListener("DOMContentLoaded", () => {
       const cortina = document.getElementById("cortina");
       const presente = document.getElementById("presente");
-      const bilheteTraseiro = document.getElementById("bilhete-traseiro");
+      const carta = document.getElementById("carta");
 
       cortina.addEventListener("click", () => {
         cortina.classList.add("aberto");
-
         setTimeout(() => {
           cortina.remove();
           presente.style.display = "block";
@@ -67,48 +65,15 @@
         }, 1500);
       });
 
-      if (presente) {
+      presente.addEventListener("click", () => {
         presente.style.display = "none";
+        carta.style.display = "block";
+        carta.classList.remove("virado");
+      });
 
-        presente.addEventListener("click", () => {
-          if (!presente.classList.contains("modo-bilhete")) {
-            // Mostrar bilhete da frente e preparar bilhete de trás invisível atrás
-            presente.src = "css/img/bilhete1.png";
-            presente.classList.add("modo-bilhete");
-            presente.classList.remove("virado");
-
-            presente.classList.remove("animar-aparecer");
-            void presente.offsetWidth;
-            presente.classList.add("animar-aparecer");
-
-            // Exibir bilhete traseiro invisível atrás
-            bilheteTraseiro.style.display = "block";
-            // Garantir que esteja invisível e rotacionado para o lado contrário
-            bilheteTraseiro.classList.remove("visivel");
-          } else {
-            if (!presente.classList.contains("virado")) {
-              presente.classList.add("girar-direita");
-
-              setTimeout(() => {
-                // Desaparece o bilhete da frente para simular o giro
-                presente.style.opacity = "0";
-
-                // Mostrar bilhete traseiro girando para frente
-                bilheteTraseiro.classList.add("visivel");
-              }, 300);
-
-              setTimeout(() => {
-                presente.classList.remove("girar-direita");
-                presente.classList.add("virado");
-
-                // Esconder o bilhete da frente após a virada
-                presente.style.display = "none";
-                presente.style.opacity = "1";
-              }, 600);
-            }
-          }
-        });
-      }
+      carta.addEventListener("click", () => {
+        carta.classList.toggle("virado");
+      });
     });
   </script>
 </body>

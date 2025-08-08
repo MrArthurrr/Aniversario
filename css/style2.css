@@ -137,6 +137,7 @@ body {
   justify-content: center;
   height: 100vh;
   text-align: center;
+  perspective: 1000px;
 }
 
 #presente {
@@ -146,7 +147,6 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  transition: transform 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
   backface-visibility: hidden;
   position: relative;
@@ -157,15 +157,45 @@ body {
   transform: scale(1.05);
 }
 
-#presente.modo-bilhete {
-  max-width: 60vw;
-  width: 80vw;
-  min-width: 300px;
+.carta {
+  width: 100vw;
+  max-width: 1000px;
+  min-width: 340px;
+  aspect-ratio: 3 / 2;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
-@keyframes aparecerComEscala {
+.carta.virado {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  backface-visibility: hidden;
+}
+
+.frente {
+  z-index: 2;
+}
+
+.tras {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+@keyframes crescer {
   0% {
-    transform: scale(0.2);
+    transform: scale(0);
     opacity: 0;
   }
   100% {
@@ -175,32 +205,7 @@ body {
 }
 
 .animar-aparecer {
-  animation: aparecerComEscala 0.6s ease-out forwards;
-}
-
-#bilhete-traseiro {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 60vw;
-  width: 80vw;
-  min-width: 300px;
-  height: auto;
-  transform: translate(-50%, -50%) rotateY(180deg);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  backface-visibility: hidden;
-  z-index: 2;
-  cursor: default;
-}
-
-#bilhete-traseiro.visivel {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) rotateY(0deg);
-  z-index: 4;
+  animation: crescer 0.6s ease forwards;
 }
 
 ::-webkit-scrollbar {
@@ -234,10 +239,5 @@ body {
 
   #presente {
     width: 80vw;
-  }
-
-  #presente.modo-bilhete {
-    width: 90vw;
-    min-width: 280px;
   }
 }
