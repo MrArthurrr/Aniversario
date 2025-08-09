@@ -240,67 +240,31 @@ body {
   border-radius: 10px;
 }
 
-.link-proximo {
-  display: inline-flex;
-  background: #f4e7d7;
-  font-family: 'Apple Garamond', sans-serif;
-  font-size: 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-  overflow: hidden;
+#linkProximo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-image: url('img/patadecachorro.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  perspective: 1000px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  z-index: 1000;
 }
 
-.link-proximo.mostrar {
+#linkProximo.mostrar {
   opacity: 1;
-  transform: scale(1);
+  visibility: visible;
 }
 
-.metade {
-  display: inline-block;
-  padding: 10px 15px;
-  backface-visibility: hidden;
-  background: #f4e7d7;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
-  color: black;
-  white-space: nowrap;
-}
-
-.metade.esquerda {
-  transform-origin: center right;
-  transform: rotateY(90deg);
-}
-
-.metade.direita {
-  transform-origin: center left;
-  transform: rotateY(-90deg);
-}
-
-.link-proximo.mostrar .metade.esquerda {
-  animation: abrir-esquerda 1s forwards ease-out;
-}
-
-.link-proximo.mostrar .metade.direita {
-  animation: abrir-direita 1s forwards ease-out;
-}
-
-@keyframes abrir-esquerda {
-  from { transform: rotateY(90deg); }
-  to { transform: rotateY(0deg); }
-}
-
-@keyframes abrir-direita {
-  from { transform: rotateY(-90deg); }
-  to { transform: rotateY(0deg); }
-}
-
-.link-proximo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+#linkProximo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 700px) {
