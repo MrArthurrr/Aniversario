@@ -83,19 +83,49 @@
         carta.classList.remove("virado");
         carta.classList.add("animar-aparecer");
 
-        carta.addEventListener("animationend", () => {
-          carta.classList.remove("animar-aparecer");
-          setTimeout(() => {
-            linkProximo.style.display = "inline-block";
+        carta.addEventListener(
+          "animationend",
+          () => {
+            carta.classList.remove("animar-aparecer");
             setTimeout(() => {
-              linkProximo.classList.add("mostrar");
-            }, 50);
-          }, 3000);
-        }, { once: true });
+              linkProximo.style.display = "inline-block";
+              setTimeout(() => {
+                linkProximo.classList.add("mostrar");
+              }, 50);
+            }, 3000);
+          },
+          { once: true }
+        );
       });
 
-      carta.addEventListener("click", () => {
-        carta.classList.toggle("virado");
+      function pixelVisivel(e) {
+        const img = carta.querySelector(".frente");
+        const rect = img.getBoundingClientRect();
+        const scaleX = img.naturalWidth / rect.width;
+        const scaleY = img.naturalHeight / rect.height;
+
+        const x = Math.floor((e.clientX - rect.left) * scaleX);
+        const y = Math.floor((e.clientY - rect.top) * scaleY);
+
+        const canvas = document.createElement("canvas");
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext("2d");
+
+        ctx.drawImage(img, 0, 0);
+        const pixel = ctx.getImageData(x, y, 1, 1).data;
+
+        return pixel[3] > 0;
+      }
+
+      carta.addEventListener("click", (e) => {
+        if (pixelVisivel(e)) {
+          carta.classList.toggle("virado");
+        }
+      });
+
+      carta.addEventListener("mousemove", (e) => {
+        carta.style.cursor = pixelVisivel(e) ? "pointer" : "default";
       });
     });
   </script>
