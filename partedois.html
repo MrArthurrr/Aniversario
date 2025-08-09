@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man's Best Friend</title>
+    <link rel="icon" href="css/img/mansbestfriend logo.png">
+    <script>
+    let titulo = "Man's Best Friend ";
+    let i = 0;
+    function moverTitulo() {
+      document.title = titulo.substring(i) + titulo.substring(0, i);
+      i = (i + 1) % titulo.length;
+      setTimeout(moverTitulo, 300);
+    }
+    window.onload = moverTitulo;
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

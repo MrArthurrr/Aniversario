@@ -36,6 +36,10 @@
         <img src="css/img/bilhete1.png" alt="Frente do Bilhete" class="face frente" />
         <img src="css/img/bilhete de tras.png" alt="Verso do Bilhete" class="face tras" />
       </div>
+      <a id="proximo-link" href="partedois.html" style="display:none;" class="link-proximo">
+        <span class="metade esquerda">Clique aqui</span>
+        <span class="metade direita">para abrir</span>
+      </a>
     </div>
   </section>
   <script>
@@ -62,6 +66,7 @@
       const cortina = document.getElementById("cortina");
       const presente = document.getElementById("presente");
       const carta = document.getElementById("carta");
+      const linkProximo = document.getElementById("proximo-link");
 
       cortina.addEventListener("click", () => {
         cortina.classList.add("aberto");
@@ -76,6 +81,17 @@
         presente.style.display = "none";
         carta.style.display = "block";
         carta.classList.remove("virado");
+        carta.classList.add("animar-aparecer");
+
+        carta.addEventListener("animationend", () => {
+          carta.classList.remove("animar-aparecer");
+          setTimeout(() => {
+            linkProximo.style.display = "inline-block";
+            setTimeout(() => {
+              linkProximo.classList.add("mostrar");
+            }, 50);
+          }, 3000);
+        }, { once: true });
       });
 
       carta.addEventListener("click", () => {
