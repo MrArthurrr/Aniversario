@@ -1,22 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Man's Best Friend</title>
-    <link rel="icon" href="css/img/mansbestfriend logo.png">
+    <link rel="stylesheet" href="css/style3.css" />
+    <link rel="icon" href="css/img/mansbestfriend logo.png" />
     <script>
-    let titulo = "Man's Best Friend ";
-    let i = 0;
-    function moverTitulo() {
-      document.title = titulo.substring(i) + titulo.substring(0, i);
-      i = (i + 1) % titulo.length;
-      setTimeout(moverTitulo, 300);
-    }
-    window.onload = moverTitulo;
-  </script>
+      let titulo = "Man's Best Friend ";
+      let i = 0;
+      function moverTitulo() {
+        document.title = titulo.substring(i) + titulo.substring(0, i);
+        i = (i + 1) % titulo.length;
+        setTimeout(moverTitulo, 300);
+      }
+      window.onload = moverTitulo;
+    </script>
 </head>
 <body>
-    
+  <section class="gif-secao">
+    <img src="css/img/manchildgif.gif" alt="Gif inicial" class="gif-inicial" />
+  </section>
+  <section class="secao">
+    <div class="player">
+      <div class="record"></div>
+      <div class="tone-arm">
+        <div class="control"></div>
+      </div>
+      <button class="btn"></button>
+      <div class="slider-container">
+        <input type="range" class="slider" min="0" max="1" step="0.1" value="0.7" />
+      </div>
+    </div>
+    <audio class="my-song" preload="auto"></audio>
+  </section>
+  <section class="albuns">
+    <div class="album" onclick="this.classList.toggle('flip')">
+      <div class="album-inner">
+        <div class="album-front">
+          <img src="css/albuns/vinil/manbestfriendcover.webp" alt="Man's Best Friend" class="album-capa" />
+        </div>
+        <div class="album-back">
+          <img src="css/albuns/vinil/mansbestfriendcoverback.jpg" alt="Man's Best Friend Verso" class="album-capa" />
+        </div>
+      </div>
+    </div>
+    <div class="album-controls">
+      <button class="album-prev">⯇</button>
+      <button class="album-play">Play</button>
+      <button class="album-next">⯈</button>
+    </div>
+  </section>
+
+  <script>
+    const albuns = [
+      {
+        nome: "Short n' Sweet",
+        frente: "css/albuns/vinil/ShortNSweetcover.webp",
+        verso: "css/albuns/vinil/ShortNSweetcoverback.webp",
+      },
+      {
+        nome: "Man's Best Friend",
+        frente: "css/albuns/vinil/manbestfriendcover.webp",
+        verso: "css/albuns/vinil/mansbestfriendcoverback.jpg",
+      },
+      {
+        nome: "Emails I Can't Send",
+        frente: "css/albuns/vinil/emailicantsendcover.png",
+        verso: "css/albuns/vinil/emailsicantsendcoverback.png",
+      }
+    ];
+
+    let indice = 0;
+
+    const albumCapaFrente = document.querySelector(".album-front img");
+    const albumCapaVerso = document.querySelector(".album-back img");
+    const btnPrev = document.querySelector(".album-prev");
+    const btnNext = document.querySelector(".album-next");
+    const btnPlay = document.querySelector(".album-play");
+
+    function atualizarAlbum() {
+      albumCapaFrente.src = albuns[indice].frente;
+      albumCapaVerso.src = albuns[indice].verso;
+      btnPlay.dataset.album = albuns[indice].nome;
+    }
+
+    btnPrev.addEventListener("click", () => {
+      indice = (indice - 1 + albuns.length) % albuns.length;
+      atualizarAlbum();
+    });
+
+    btnNext.addEventListener("click", () => {
+      indice = (indice + 1) % albuns.length;
+      atualizarAlbum();
+    });
+
+    atualizarAlbum();
+  </script>
+
+  <script src="js/vinil.js" defer></script>
 </body>
 </html>

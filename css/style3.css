@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url(font/AppleGaramond.ttf) format('truetype');
+}
+
+body {
+  background-color: #f0e7df;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.gif-secao {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8faff;
+  z-index: 1;
+}
+
+.gif-inicial {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.secao {
+  position: relative;
+  min-height: 105vh;
+  background-color: #f0e7df;
+  background-image: url('img/fundomansbestfriend.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.player {
+  background-color: #e5ded0;
+  width: 330px;
+  height: 190px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  box-shadow: 0 8px 0 0 #d1c6b5;
+}
+
+.record {
+  height: 175px;
+  width: 175px;
+  background-color: #181312;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tone-arm {
+  height: 90px;
+  width: 6px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 25px;
+  right: 95px;
+  transition: 1s;
+  transform-origin: top;
+}
+
+.control {
+  background-color: #181312;
+  height: 17px;
+  width: 17px;
+  border: 10px solid #2c2c2c;
+  border-radius: 50%;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+}
+
+.tone-arm:before {
+  content: "";
+  height: 40px;
+  width: 6px;
+  background-color: #ffffff;
+  position: absolute;
+  transform: rotate(30deg);
+  bottom: -36px;
+  right: 10px;
+}
+
+.tone-arm:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 10px;
+  border-top: 18px solid #b2aea6;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  top: 108px;
+  right: 12.5px;
+  transform: rotate(30deg);
+}
+
+.btn {
+  height: 28px;
+  width: 28px;
+  background-color: #c2bebc;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  border: 3.5px solid #a7a6a6;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  transform: rotate(-90deg);
+  width: 90px;
+  height: 7px;
+  position: absolute;
+  left: 233px;
+  top: 60px;
+  background-color: #a39b90;
+  outline: none;
+  border-radius: 3px;
+  border: 6px solid #d1c6b5;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.play {
+  transform: rotate(30deg);
+  transform-origin: top;
+  transition: 1s;
+}
+
+.on {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.albuns {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f4e7d7;
+  background-image: url('img/fundomansbestfriend.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.album {
+  perspective: 1000px;
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.album-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.album.flip .album-inner {
+  transform: rotateY(180deg);
+}
+
+.album-front,
+.album-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  backface-visibility: hidden;
+}
+
+.album-front img,
+.album-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.album-back {
+  transform: rotateY(180deg);
+}
+
+.album-play {
+  padding: 8px 16px;
+  font-family: 'Apple Garamond', sans-serif;
+  font-size: 16px;
+  background: #d52f31;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.album-play:hover {
+  background: #be272a;
+}
+
+.album-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.album-prev,
+.album-next {
+  padding: 6px 15px;
+  background: #d52f31;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 16px;
+}
+
+.album-prev:hover,
+.album-next:hover {
+  background: #be272a;
+}
