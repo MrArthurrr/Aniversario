@@ -178,11 +178,6 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: #f4e7d7;
-  background-image: url('img/fundomansbestfriend.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
   color: #333;
   display: flex;
   flex-direction: column;
@@ -192,6 +187,18 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   z-index: 1;
+}
+
+.albuns::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('img/fundomansbestfriend.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: scaleY(-1);
+  z-index: -1;
 }
 
 .album {

@@ -95,6 +95,27 @@ document.addEventListener("DOMContentLoaded", () => {
         "css/albuns/Short n' Sweet/Don't Smile - Sabrina Carpenter.mp3"
       ]
     },
+    "short-n-sweet-deluxe": {
+      vinilImg: "css/albuns/vinil/ShortNSweetDeluxe.webp",
+      musicas: [
+        "css/albuns/Short n' Sweet/Taste - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Please Please Please - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Good Graces - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Sharpest Tool - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Coincidence - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Bed Chem - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Espresso - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Dumb _ Poetic - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Slim Pickins - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Juno - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Lie To Girls - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Don't Smile - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/15 Minutes - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Couldn_t Make It Any Harder - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Busy Woman - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Bad Reviews - Sabrina Carpenter.mp3"
+      ]
+    },
     "mans-best-friend": {
       vinilImg: "css/albuns/vinil/manbestfriendvinil.png",
       musicas: [
@@ -104,24 +125,58 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     "emails-i-cant-send": {
-      vinilImg: "css/albuns/vinil/EmailICantSend.png",
+      vinilImg: "css/albuns/vinil/EmailsICantSend.png",
       musicas: [
-        "css/albuns/emails i can't send/Already Over - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/Bad for Business - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/because i liked a boy - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/bet u wanna - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/decode - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/emails i can't send - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/Fast Times - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/Feather - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/how many things - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/Lonesome - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/Nonsense - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/opposite - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/emails i cant send - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Vicious - Sabrina Carpenter.mp3",
         "css/albuns/emails i can't send/Read your Mind - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/skinny dipping - Sabrina Carpenter.mp3",
         "css/albuns/emails i can't send/Tornado Warnings - Sabrina Carpenter.mp3",
-        "css/albuns/emails i can't send/Vicious - Sabrina Carpenter.mp3"
+        "css/albuns/emails i can't send/because i liked a boy - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Already Over - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/how many things - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/bet u wanna - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Nonsense - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Fast Times - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/skinny dipping - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Bad for Business - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/decode - Sabrina Carpenter.mp3"
+      ]
+    },
+    "emails-i-cant-send-fwd": {
+      vinilImg: "css/albuns/vinil/EmailsICantSendFWD.png",
+      musicas: [
+        "css/albuns/emails i can't send/emails i cant send - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Vicious - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Read your Mind - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Tornado Warnings - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/because i liked a boy - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Already Over - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/how many things - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/bet u wanna - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Nonsense - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Fast Times - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/skinny dipping - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Bad for Business - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/decode - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/opposite - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Feather - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/Lonesome - Sabrina Carpenter.mp3",
+        "css/albuns/emails i can't send/things i wish you said - Sabrina Carpenter.mp3"
+      ]
+    },
+    "evolution": {
+      vinilImg: "css/albuns/vinil/EVOLution.png",
+      musicas: [
+        "css/albuns/EVOLution/On Purpose - Sabrina Carpenter.m4a",
+        "css/albuns/EVOLution/Feels Like Loneliness - Sabrina Carpenter.m4a",
+        "css/albuns/EVOLution/Thumbs - Sabrina Carpenter.m4a",
+        "css/albuns/EVOLution/No Words - Sabrina Carpenter.m4a",
+        "css/albuns/EVOLution/Run and Hide - Sabrina Carpenter.mp3",
+        "css/albuns/EVOLution/Mirage - Sabrina Carpenter.mp3",
+        "css/albuns/EVOLution/Don't Want It Back - Sabrina Carpenter.mp3",
+        "css/albuns/EVOLution/Shadows - Sabrina Carpenter.mp3",
+        "css/albuns/EVOLution/Space - Sabrina Carpenter.mp3",
+        "css/albuns/EVOLution/All We Have Is Love - Sabrina Carpenter.mp3"
       ]
     }
   };
