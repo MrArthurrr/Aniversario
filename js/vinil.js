@@ -178,8 +178,69 @@ document.addEventListener("DOMContentLoaded", () => {
         "css/albuns/EVOLution/Space - Sabrina Carpenter.mp3",
         "css/albuns/EVOLution/All We Have Is Love - Sabrina Carpenter.mp3"
       ]
+    },
+    "singular-act-i-": {
+      vinilImg: "css/albuns/vinil/Singular Act I.png",
+      musicas: [
+        "css/albuns/Singular Act I-/Almost Love - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act I-/Paris - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act I-/Hold Tight - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act I-/Sue Me - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act I-/prfct - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act I-/Bad Time - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act I-/Mona Lisa - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act I-/Diamonds Are Forever - Sabrina Carpenter.mp3"
+      ]
+    },
+    "singular-act-ii-": {
+      vinilImg: "css/albuns/vinil/Singular Act II.png",
+      musicas: [
+        "css/albuns/Singular Act II-/In My Bed - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act II-/Pushing 20 - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act II-/I Can't Stop Me - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act II-/I'm Fakin - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act II-/Take Off All Your Cool - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act II-/Tell Em - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act II-/Exhale - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act II-/Take You Back - Sabrina Carpenter.mp3",
+        "css/albuns/Singular Act II-/Looking At Me - Sabrina Carpenter.mp3",
+      ]
+    },
+    "honeymoon-fades": {
+      vinilImg: "css/albuns/vinil/Honeymoon Fades.png",
+      musicas: [
+        "css/albuns/Honeymoon Fades/Honeymoon Fades - Sabrina Carpenter.mp3"
+      ]
+    },
+    "eyes-wide-open": {
+      vinilImg: "css/albuns/vinil/Eyes Wide Open.png",
+      musicas: [
+        "css/albuns/Eyes Wide Open/Eyes Wide Open - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/Can't Blame a Girl for Trying - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/The Middle of Starting Over - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/We'll Be The Stars - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/Two Young Hearts - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/Your Love's Like - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/Too Young - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/Seamless - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/Right Now - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/Darling I'm a Mess - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/White Flag - Sabrina Carpenter.mp3",
+        "css/albuns/Eyes Wide Open/Best Thing I Got - Sabrina Carpenter.mp3"
+      ]
+    },
+    "fruitcake": {
+      vinilImg: "css/albuns/vinil/Fruitcake.png",
+      musicas: [
+        "css/albuns/Fruitcake/A Nonsense Christmas - Sabrina Carpenter.mp3",
+        "css/albuns/Fruitcake/buy me presents - Sabrina Carpenter.mp3",
+        "css/albuns/Fruitcake/santa doesn't know you like i do - Sabrina Carpenter.mp3",
+        "css/albuns/Fruitcake/cindy lou who - Sabrina Carpenter.mp3",
+        "css/albuns/Fruitcake/is it new years yet - Sabrina Carpenter.mp3",
+        "css/albuns/Fruitcake/white xmas - Sabrina Carpenter.mp3"
+      ]
     }
-  };
+  }
 
   btnPlay.addEventListener("click", () => {
     const albumKey = slugify(btnPlay.dataset.album);

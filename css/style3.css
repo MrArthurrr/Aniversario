@@ -281,3 +281,16 @@ body {
 .album-next:hover {
   background: #be272a;
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eccbb9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6d0101;
+  border-radius: 10px;
+}
