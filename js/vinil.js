@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     "emails-i-cant-send-fwd": {
-      vinilImg: "css/albuns/vinil/EmailsICantSendFWD.png",
+      vinilImg: "css/albuns/vinil/EmailsICantSend.png",
       musicas: [
         "css/albuns/emails i can't send/emails i cant send - Sabrina Carpenter.mp3",
         "css/albuns/emails i can't send/Vicious - Sabrina Carpenter.mp3",

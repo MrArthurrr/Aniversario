@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Man's Best Friend</title>
     <link rel="stylesheet" href="css/style3.css" />
-    <link rel="icon" href="css/img/mansbestfriend logo.png" />
+    <link rel="icon" href="css/img/manbestfriendlogo.png" />
     <script>
       let titulo = "Man's Best Friend ";
       let i = 0;
@@ -55,9 +55,9 @@
   <script>
     const albuns = [
       {
-        nome: "Short n' Sweet",
-        frente: "css/albuns/vinil/ShortNSweetcover.webp",
-        verso: "css/albuns/vinil/ShortNSweetcoverback.webp",
+        nome: "Man's Best Friend",
+        frente: "css/albuns/vinil/manbestfriendcover.webp",
+        verso: "css/albuns/vinil/mansbestfriendcoverback.jpg",
       },
       {
         nome: "Short n' Sweet Deluxe",
@@ -65,9 +65,19 @@
         verso: "css/albuns/vinil/ShortNSweetDeluxecoverback.jpeg",
       },
       {
-        nome: "Man's Best Friend",
-        frente: "css/albuns/vinil/manbestfriendcover.webp",
-        verso: "css/albuns/vinil/mansbestfriendcoverback.jpg",
+        nome: "Short n' Sweet",
+        frente: "css/albuns/vinil/ShortNSweetcover.webp",
+        verso: "css/albuns/vinil/ShortNSweetcoverback.webp",
+      },
+      {
+        nome: "Fruitcake",
+        frente: "css/albuns/vinil/fruitcakecover.png",
+        verso: "css/albuns/vinil/fruitcakecoverback.png",
+      },
+      {
+        nome: "Emails I Can't Send Fwd",
+        frente: "css/albuns/vinil/emailicantsendfwd.png",
+        verso: "css/albuns/vinil/emailsicantsendfwdcoverback.png",
       },
       {
         nome: "Emails I Can't Send",
@@ -75,24 +85,9 @@
         verso: "css/albuns/vinil/emailsicantsendcoverback.png",
       },
       {
-        nome: "Emails I Can't Send Fwd:",
-        frente: "css/albuns/vinil/emailicantsendfwd.png",
-        verso: "css/albuns/vinil/emailsicantsendfwdcoverback.png",
-      },
-      {
-        nome: "Evolution",
-        frente: "css/albuns/vinil/EVOLution cover.webp",
-        verso: "css/albuns/vinil/EVOLution cover back.jpg",
-      },
-      {
         nome: "Honeymoon Fades",
         frente: "css/albuns/vinil/honeymoonfadescover.jpg",
         verso: "css/albuns/vinil/honeymoonfadescoverback.jpg",
-      },
-      {
-        nome: "Singular Act I-",
-        frente: "css/albuns/vinil/singularacticover.png",
-        verso: "css/albuns/vinil/singularacticoverback.png",
       },
       {
         nome: "Singular Act II-",
@@ -100,14 +95,19 @@
         verso: "css/albuns/vinil/singularactiicoverback.png",
       },
       {
+        nome: "Singular Act I-",
+        frente: "css/albuns/vinil/singularacticover.png",
+        verso: "css/albuns/vinil/singularacticoverback.png",
+      },
+      {
+        nome: "Evolution",
+        frente: "css/albuns/vinil/EVOLution cover.webp",
+        verso: "css/albuns/vinil/EVOLution cover back.jpg",
+      },
+      {
         nome: "Eyes Wide Open",
         frente: "css/albuns/vinil/eyeswideopencover.png",
         verso: "css/albuns/vinil/eyeswideopencoverback.png",
-      },
-      {
-        nome: "Fruitcake",
-        frente: "css/albuns/vinil/fruitcakecover.png",
-        verso: "css/albuns/vinil/fruitcakecoverback.png",
       }
     ];
 
@@ -120,6 +120,8 @@
     const btnPlay = document.querySelector(".album-play");
 
     function atualizarAlbum() {
+      document.querySelector(".album").classList.remove("flip");
+  
       albumCapaFrente.src = albuns[indice].frente;
       albumCapaVerso.src = albuns[indice].verso;
       btnPlay.dataset.album = albuns[indice].nome;
