@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btn.addEventListener("click", () => {
     if (!playlist.length) {
-      alert("Selecione um álbum para tocar.");
+      document.querySelector(".albuns").scrollIntoView({ behavior: "smooth" });
       return;
     }
 
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     "emails-i-cant-send-fwd": {
-      vinilImg: "css/albuns/vinil/EmailsICantSend.png",
+      vinilImg: "css/albuns/vinil/EmailsICantSendFWD.png",
       musicas: [
         "css/albuns/emails i can't send/emails i cant send - Sabrina Carpenter.mp3",
         "css/albuns/emails i can't send/Vicious - Sabrina Carpenter.mp3",
@@ -227,6 +227,49 @@ document.addEventListener("DOMContentLoaded", () => {
         "css/albuns/Eyes Wide Open/Darling I'm a Mess - Sabrina Carpenter.mp3",
         "css/albuns/Eyes Wide Open/White Flag - Sabrina Carpenter.mp3",
         "css/albuns/Eyes Wide Open/Best Thing I Got - Sabrina Carpenter.mp3"
+      ]
+    },
+    "espresso": {
+      vinilImg: "css/albuns/vinil/Espresso.png",
+      musicas: [
+        "css/albuns/Short n' Sweet/Espresso - Sabrina Carpenter.mp3",
+      ]
+    },
+    "please-please-please": {
+      vinilImg: "css/albuns/vinil/Please Please Please.png",
+      musicas: [
+        "css/albuns/Short n' Sweet/Please Please Please - Sabrina Carpenter.mp3",
+      ]
+    },
+    "manchild": {
+      vinilImg: "css/albuns/vinil/Manchild.png",
+      musicas: [
+        "css/albuns/Man's Best Friend/Manchild - Sabrina Carpenter.mp3",
+      ]
+    },
+    "taste": {
+      vinilImg: "css/albuns/vinil/Taste.png",
+      musicas: [
+        "css/albuns/Short N' Sweet/Taste - Sabrina Carpenter.mp3",
+      ]
+    },
+    "bed-chem": {
+      vinilImg: "css/albuns/vinil/Bed Chem.png",
+      musicas: [
+        "css/albuns/Short N' Sweet/Bed Chem - Sabrina Carpenter.mp3",
+      ]
+    },
+    "feather": {
+      vinilImg: "css/albuns/vinil/Feather.png",
+      musicas: [
+        "css/albuns/emails i can't send/Feather - Sabrina Carpenter.mp3",
+      ]
+    },
+    "nonsense/a-nonsense-christmas": {
+      vinilImg: "css/albuns/vinil/Nonsense.png",
+      musicas: [
+        "css/albuns/emails i can't send/Nonsense - Sabrina Carpenter.mp3",
+        "css/albuns/Fruitcake/A Nonsense Christmas - Sabrina Carpenter.mp3",
       ]
     },
     "fruitcake": {

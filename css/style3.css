@@ -38,7 +38,7 @@ body {
   background-image: url('img/fundomansbestfriend.png');
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -10px 15px -10px rgba(0, 0, 0, 0.4);
   color: #333;
   display: flex;
   flex-direction: column;
