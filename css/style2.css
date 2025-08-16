@@ -300,3 +300,33 @@ body {
   }
   
 }
+
+@media (min-width: 2000px) {
+  .carta {
+    transform: scale(1.2) rotateY(0deg);
+  }
+
+  .carta.virado {
+    transform: scale(1.2) rotateY(180deg);
+  }
+
+  #linkProximo {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (min-width: 3000px) {
+  .carta {
+    transform: scale(2) rotateY(0deg);
+  }
+
+  .carta.virado {
+    transform: scale(2) rotateY(180deg);
+  }
+
+  #linkProximo {
+    width: 180px;
+    height: 180px;
+  }
+}
