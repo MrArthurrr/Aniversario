@@ -250,13 +250,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "taste": {
       vinilImg: "css/albuns/vinil/Taste.png",
       musicas: [
-        "css/albuns/Short N' Sweet/Taste - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Taste - Sabrina Carpenter.mp3",
       ]
     },
     "bed-chem": {
       vinilImg: "css/albuns/vinil/Bed Chem.png",
       musicas: [
-        "css/albuns/Short N' Sweet/Bed Chem - Sabrina Carpenter.mp3",
+        "css/albuns/Short n' Sweet/Bed Chem - Sabrina Carpenter.mp3",
       ]
     },
     "feather": {
