@@ -43,7 +43,7 @@ body {
 
 .seção {
   position: relative;
-  min-height: 105vh;
+  min-height: 110vh;
   background-color: #f0e7df;
   background-image: url(img/fundomansbestfriend.png);
   background-repeat: no-repeat;
@@ -296,7 +296,7 @@ body {
 
   #presente {
     width: 100vw;
-    max-width: 800px;
+    max-width: 600px;
   }
   
 }
