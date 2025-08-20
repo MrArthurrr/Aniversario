@@ -18,13 +18,22 @@
   </script>
 </head>
 <body>
-  <div class="envelope" onclick="abrirCarta()">
-    <div class="tampa"></div>
-    <div class="corpo"></div>
-    <div class="papel">
-      <a href="siteprincipal.html">Clique aqui para abrir</a>
+  <section class="secao-topo">
+    <img src="css/img/intro.gif" alt="gif animado" class="gif-central">
+    <img src="css/img/border-desktop-top.png" class="decor decor-top" alt="">
+    <img src="css/img/border-desktop-left.png" class="decor decor-left" alt="">
+    <img src="css/img/border-desktop-right.png" class="decor decor-right" alt="">
+    <img src="css/img/border-desktop-bottom.png" class="decor decor-bottom" alt="">
+  </section>
+  <section class="secao-envelope">
+    <div class="envelope" onclick="abrirCarta()">
+      <div class="tampa"></div>
+      <div class="corpo"></div>
+      <div class="papel">
+        <a href="siteprincipal.html">Clique aqui para abrir</a>
+      </div>
     </div>
-  </div>
+  </section>
   <script>
     function abrirCarta() {
       document.querySelector('.envelope').classList.add('aberto');

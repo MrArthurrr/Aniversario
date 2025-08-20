@@ -5,14 +5,70 @@
 
 body {
   margin: 0;
-  padding: 0;
-  background-color: #f2e7de;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: sans-serif;
+  min-height: 100vh;
+  background-color: #f4f1e1;
   background-image: url('img/fundo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.secao-topo {
+  position: relative;
+  width: 100%;
+  min-height: 105vh;
+  background-color: #f0e7df;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.secao-topo .decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  display: block;
+}
+
+.secao-topo .decor-top,
+.secao-topo .decor-bottom {
+  left: 0;
+  width: 100%;
+  height: var(--edge-h);
+  object-fit: cover;
+  object-position: center;
+}
+
+.secao-topo .decor-top    { top: 0; }
+.secao-topo .decor-bottom { bottom: 0; }
+
+.secao-topo .decor-left,
+.secao-topo .decor-right {
+  top: 0;
+  height: 100%;
+  width: var(--edge-w);
+  object-fit: cover;
+  object-position: center;
+}
+
+.secao-topo .decor-left  { left: 0; }
+.secao-topo .decor-right { right: 0; }
+
+.secao-topo img { display: block; }
+
+.secao-envelope {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px 64px;
+  box-sizing: border-box;
 }
 
 .envelope {
@@ -72,7 +128,6 @@ body {
   z-index: 3;
 }
 
-
 .envelope.aberto .corpo {
   z-index: 5;
 }
@@ -127,4 +182,47 @@ body {
 
 .papel a:hover {
   color: #b52b27;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --edge-h: 64px;
+    --edge-w: 12px;
+  }
+
+  .gif-central {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 2000px) {
+  .envelope {
+    transform: scale(1.3);
+  }
+
+  .gif-central {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 2500px) {
+  .envelope {
+    transform: scale(1.5);
+  }
+
+  .gif-central {
+    transform: scale(1.3);
+  }
+}
+
+@media (min-width: 3000px) {
+  .envelope {
+    transform: scale(2.3);
+  }
+
+  .gif-central {
+    transform: scale(2);
+  }
 }
