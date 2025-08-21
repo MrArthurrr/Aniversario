@@ -6,7 +6,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #f4f1e1;
+  background-color: #f2e7de;
   background-image: url('img/fundo.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -225,4 +225,17 @@ body {
   .gif-central {
     transform: scale(2);
   }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eccbb9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #353477;
+  border-radius: 10px;
 }
